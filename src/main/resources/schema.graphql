@@ -1,0 +1,168 @@
+type Query {
+  person(id: Int!): Person
+  people(queryString: String): People
+  planet(id: Int!): Planet
+  planets(queryString: String): Planets
+  film(id: Int!): Film
+  films(queryString: String): Films
+  starship(id: Int!): Starship
+  starships(queryString: String): Starships
+  vehicle(id: Int!): Vehicle
+  vehicles(queryString: String): Vehicles
+  species(id: Int!): Species
+  speciesList(queryString: String): SpeciesList
+
+}
+
+type Person {
+  name: String
+  height: String
+  mass: String
+  hairColor: String
+  skinColor: String
+  eyeColor: String
+  birthYear: String
+  gender: String
+  homeworld: String
+  films: [String]
+  species: [String]
+  vehicles: [String]
+  starships: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+type Planet{
+  name: String
+  rotationPeriod: String
+  orbitalPeriod: String
+  diameter: String
+  climate: String
+  gravity: String
+  terrain: String
+  surfaceWater: String
+  population: String
+  residents: [String]
+  films: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+type Film{
+  title: String
+  episodeId: Int
+  openingCrawl: String
+  director: String
+  producer: String
+  releaseDate: String
+  species: [String]
+  starships: [String]
+  vehicles: [String]
+  characters: [String]
+  planets: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+type Starship{
+  name: String
+  model: String
+  starshipClass: String
+  manufacturer: String
+  costInCredits: String
+  length: String
+  crew: String
+  passengers: String
+  maxAtmospheringSpeed: String
+  hyperdriveRating: String
+  mglt: String
+  cargoCapacity: String
+  consumables: String
+  films: [String]
+  pilots: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+type Vehicle{
+  name: String
+  model: String
+  vehicleClass: String
+  manufacturer: String
+  costInCredits: String
+  length: String
+  crew: String
+  passengers: String
+  maxAtmospheringSpeed: String
+  cargoCapacity: String
+  consumables: String
+  films: [String]
+  pilots: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+type Species {
+  name: String
+  classification: String
+  designation: String
+  averageHeight: String
+  averageLifespan: String
+  eyeColors: String
+  hairColors: String
+  skinColors: String
+  language: String
+  homeworld: String
+  people: [String]
+  films: [String]
+  created: String
+  edited: String
+  url: String
+}
+
+type People{
+  count: Int
+  next: String
+  previous: String
+  results: [Person!]
+}
+
+type Planets{
+  count: Int
+  next: String
+  previous: String
+  results: [Planet!]
+}
+
+type Films{
+  count: Int
+  next: String
+  previous: String
+  results: [Film!]
+}
+
+type Starships{
+  count: Int
+  next: String
+  previous: String
+  results: [Starship!]
+}
+
+type Vehicles{
+  count: Int
+  next: String
+  previous: String
+  results: [Vehicle!]
+}
+
+type SpeciesList{
+  count: Int
+  next: String
+  previous: String
+  results: [Species!]
+}
